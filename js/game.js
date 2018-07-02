@@ -9,6 +9,9 @@ var Game = {
     Game.cells = Board.getCells();
     Game.next = document.getElementById('next');
     Game.play = document.getElementById('play');
+    if(Board.valueSize != ''){
+      Board.sizeBoard();
+    }
   },
   start: function() {
     for (var i = 0; i < Game.cells.length; i++) {
