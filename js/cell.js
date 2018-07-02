@@ -1,0 +1,14 @@
+var Cell = {
+  isAlive: false,
+  changeColor: function(li) {
+    li.style.backgroundColor='red';
+  },
+  toggle: function(evt) {
+    var cell = evt.target;
+    if(cell.className === 'alive') {
+      cell.className = '';
+    } else {
+      cell.className = 'alive';
+    }
+  }
+}
