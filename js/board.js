@@ -1,13 +1,9 @@
-var valueSize = prompt('Select the size that you want!');
-alert('enjoy! :)')
-var pixelSize = valueSize * 36;
-
 var Board = {
-  rows: valueSize,
-  columns: valueSize,
-  sizeBoard: function(){
-    document.getElementsByClassName('board')[0].style.width = pixelSize + 'px'
-    document.getElementsByClassName('board')[0].style.height = pixelSize + 'px'
+  rows: null,
+  columns: null,
+  sizeBoard: function(valueSize){
+    document.getElementsByClassName('board')[0].style.width = valueSize + 'px'
+    document.getElementsByClassName('board')[0].style.height = valueSize + 'px'
   },
   getBoard: function() {
     return document.getElementsByClassName('board')[0];

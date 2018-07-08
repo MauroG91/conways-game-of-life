@@ -15,8 +15,8 @@ html, body {
   border-style: solid;
   border-width: 2px;
   border-color: #999;
-  width: 180px;
-  height: 180px;
+  width: ;
+  height: ;
   display: flex;
   flex-wrap: wrap;
 }
@@ -34,9 +34,21 @@ html, body {
   background-color: #000;
 }
 
-button {
+.btn{
   margin: 5px;
   width: 50px;
   height: 30px;
   cursor: pointer;
+  visibility: hidden;
+}
+
+.initForm{
+  height: 200px;
+  width: 600px;
+  background-color: rgb(182, 176, 199);
+  border: 2px solid black;
+}
+
+ul{
+  visibility: hidden;
 }
