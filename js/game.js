@@ -3,6 +3,8 @@ var Game = {
   board: null,
   cells: null,
   play : null,
+  btn: null,
+  interval: null,
   init: function() {
     Board.createCells();
     Game.board = Board.getBoard();
@@ -15,18 +17,20 @@ var Game = {
   },
   start: function() {
     for (var i = 0; i < Game.cells.length; i++) {
-    Game.cells[i].onclick = Cell.toggle;
+      Game.cells[i].onclick = Cell.toggle;
     };
     Game.next.onclick = Board.nextStep;
     Game.play.onclick = Game.update;
   },
   update: function() {
-    setInterval(Board.nextStep, 1000);
-  },
-  render: function() {
-
+    if(Game.play.id === 'play'){
+      interval = setInterval(Board.nextStep, 1000);
+    }else{
+      Game.die()
+    }
+    Board.changeNameButton();
   },
   die: function() {
-
+    clearInterval(interval);
   }
 };

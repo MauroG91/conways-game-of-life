@@ -6,8 +6,8 @@ var Board = {
   rows: valueSize,
   columns: valueSize,
   sizeBoard: function(){
-  document.getElementsByClassName('board')[0].style.width = pixelSize + 'px'
-  document.getElementsByClassName('board')[0].style.height = pixelSize + 'px'
+    document.getElementsByClassName('board')[0].style.width = pixelSize + 'px'
+    document.getElementsByClassName('board')[0].style.height = pixelSize + 'px'
   },
   getBoard: function() {
     return document.getElementsByClassName('board')[0];
@@ -47,5 +47,17 @@ var Board = {
     var newBoard = GameOfLife.createEmptyBoard(Board.rows, Board.columns);
     GameOfLife.getNextStep(currentBoard, newBoard);
     Board.updateCells(newBoard);
+  },
+  changeNameButton : function(){
+    var btn = Game.play;
+    if(btn.id === 'play'){
+      btn.innerText = 'Stop!';
+      btn.id = 'stop';
+      btn.name = 'stop';
+    }else{
+      btn.innerText = 'Play!';
+      btn.id = 'play';
+      btn.name = 'play';
+    }
   }
 }
