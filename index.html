@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Javascript 1</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/game-of-life.js"></script>
-    <script type="text/javascript" src="js/cell.js"></script>
-    <script type="text/javascript" src="js/board.js"></script>
-    <script type="text/javascript" src="js/game.js"></script>
-  </head>
-  <body>
-    <div class="game" id="game">
-      <form id="initForm" class="initForm" action="index.html" method="post">
-        <h1>Jhon Conways Game of Life</h1>
-        <h2>Select the size you want</h2>
-        <input id="input" type="text" name="" value="">
-        <button id="start" type="button" name="button">Start</button>
-      </form>
+<head>
+  <meta charset="utf-8">
+  <title>Javascript 1</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/game-of-life.js"></script>
+  <script type="text/javascript" src="js/cell.js"></script>
+  <script type="text/javascript" src="js/board.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+</head>
+<body>
+  <div class="game" id="game">
+    <form id="initForm" class="initForm" action="index.html" method="post">
+      <br>
+      <h1>Jhon Conways Game of Life</h1>
+      <br>
+      <br>
+      <span id="container">
+        <h2> Select the size you want:</h2>
+        <input id="input" type="number" name="" value="" maxlength="2" min="0" max="30">
+      </span>
+      <button id="start" type="button" name="button">Start</button>
+    </form>
 
-      <ul class="board">
-      </ul>
-      <button class="btn" id="play" type="button" name="play">Play!</button>
-      <button class="btn" id="next" type="button" name="next">Next!</button>
-    </div>
-  </body>
+    <ul class="board">
+    </ul>
+    <button class="btn" id="play" type="button" name="play">Play!</button>
+    <button class="btn" id="next" type="button" name="next">Next!</button>
+  </div>
+</body>
 </html>
