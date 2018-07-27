@@ -3,11 +3,16 @@ var Game = {
   board: null,
   cells: null,
   play : null,
-  btn: null,
+  load: null,
   interval: null,
   init: function() {
     Board.createCells();
     Game.board = Board.getBoard();
+    Game.cells = Board.getCells();
+    Game.next = document.getElementById('next');
+    Game.play = document.getElementById('play');
+  },
+  load: function() {
     Game.cells = Board.getCells();
     Game.next = document.getElementById('next');
     Game.play = document.getElementById('play');

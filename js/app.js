@@ -1,6 +1,7 @@
 var play = function() {
-  var liAlives = Board.getCells();
-  Board.updateCells(liAlives);
+  init();
+  deleteItems();
+  visibleItems();
 }
 
 var init = function() {
@@ -13,8 +14,6 @@ var init = function() {
 }
 
 var deleteItems = function() {
-  init();
-  visibleItems();
   var parent = document.getElementById('game');
   var child = document.getElementById('initForm');
   parent.removeChild(child);
@@ -29,10 +28,10 @@ var visibleItems = function() {
 var inputCheck = function() {
   if(document.getElementById('input').value === '') {
     document.getElementById('start').disabled = true;
-  }else{
+  } else {
     if(document.getElementById('input').value <= 30) {
       document.getElementById('start').disabled = false;
-    }else{
+    } else {
       alert('The number must be less than or equal to 30');
       document.getElementById('input').value = 30;
     }
@@ -40,13 +39,14 @@ var inputCheck = function() {
 }
 
 var eventListener = function() {
-  console.log('eventListener')
   document.addEventListener("input", inputCheck);
 }
 
 window.onload = function() {
   document.getElementById('start').disabled = true;
   var btnStart = document.getElementById('start');
-  btnStart.onclick = deleteItems;
+  var btnLastSession = document.getElementById('lastSession');
+  btnStart.onclick = play;
+  btnLastSession.onclick = Storage.getStorage;
   eventListener();
 }

@@ -72,14 +72,15 @@ input{
   right: -14px;
 }
 
-#start{
-  height: 60px;
+.btnForm{
+  margin-bottom: 5px;
+  height: 80px;
   width: 100px;
-  font-size: 20px;
+  font-size: 17px;
   align-self: flex-end;
   position: relative;
   right: 20px;
-  top: 15px;
+  top: -10px;
 }
 
 ul{

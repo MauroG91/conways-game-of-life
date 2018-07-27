@@ -1,7 +1,7 @@
 var Board = {
   rows: null,
   columns: null,
-  sizeBoard: function(valueSize){
+  sizeBoard: function(valueSize) {
     document.getElementsByClassName('board')[0].style.width = valueSize + 'px'
     document.getElementsByClassName('board')[0].style.height = valueSize + 'px'
   },
@@ -43,17 +43,20 @@ var Board = {
     var newBoard = GameOfLife.createEmptyBoard(Board.rows, Board.columns);
     GameOfLife.getNextStep(currentBoard, newBoard);
     Board.updateCells(newBoard);
+    Storage.setStorage();
   },
-  changeNameButton : function(){
+  changeNameButton : function() {
     var btn = Game.play;
     if(btn.id === 'play'){
       btn.innerText = 'Stop!';
       btn.id = 'stop';
       btn.name = 'stop';
-    }else{
+      Storage.setStorage();
+    } else {
       btn.innerText = 'Play!';
       btn.id = 'play';
       btn.name = 'play';
+      Storage.setStorage();
     }
   }
 }

@@ -10,5 +10,6 @@ var Cell = {
     } else {
       cell.className = 'alive';
     }
+    Storage.setStorage();
   }
 }

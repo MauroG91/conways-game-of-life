@@ -1,5 +1,5 @@
 var GameOfLife = {
-  createEmptyBoard: function(rows, cols){
+  createEmptyBoard: function(rows, cols) {
     var newBoard = [];
     for (var i = 0; i < rows; i++) {
       var row = [];
@@ -17,7 +17,7 @@ var GameOfLife = {
       var cell = cells[i];
       var isAlive = cell.className === 'alive';
       row.push(isAlive);
-      if(i % cols === (cols-1)){
+      if(i % cols === (cols-1)) {
         board.push(row);
         row = [];
       }
@@ -30,7 +30,7 @@ var GameOfLife = {
       for (var j = 0; j < row.length; j++) {
         var cell = row[j];
         var willBeAlive = GameOfLife.applyRule(a, i, j)
-        if(willBeAlive){
+        if(willBeAlive) {
           b[i][j] = true;
         }
       }
