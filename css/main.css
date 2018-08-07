@@ -1,5 +1,5 @@
 html, body {
-  background-color: #444;
+  background-color: rgba(#ffffff, 0);
 }
 
 .game {
@@ -14,7 +14,7 @@ html, body {
   background-color: #ccc;
   border-style: solid;
   border-width: 2px;
-  border-color: #999;
+  border-color: rgb(232, 170, 78);
   width: ;
   height: ;
   display: flex;
@@ -31,7 +31,7 @@ html, body {
 }
 
 .board li.alive {
-  background-color: #000;
+  background-color: rgb(232, 170, 78);
 }
 
 .btn{
@@ -42,53 +42,10 @@ html, body {
   visibility: hidden;
 }
 
-.initForm{
-  height: 200px;
-  width: 600px;
-  background-color: rgb(182, 176, 199);
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-}
-
-h1 {
-  text-decoration: underline;
-  text-align: center;
-  font-size: 50px;
-}
-
-h2 {
-  text-decoration: underline;
-  text-align: left;
-  font-size: 25px;
-  position: relative;
-  right: -10px;
-}
-
-input{
-  height: 20px;
-  width: 50px;
-  position:relative;
-  right: -14px;
-}
-
-.btnForm{
-  margin-bottom: 5px;
-  height: 80px;
-  width: 100px;
-  font-size: 17px;
-  align-self: flex-end;
-  position: relative;
-  right: 20px;
-  top: -10px;
-}
-
 ul{
   visibility: hidden;
 }
 
-#container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+button:hover{
+  cursor: pointer;
 }

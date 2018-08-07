@@ -1,0 +1,38 @@
+#initForm{
+  background-color: rgb(232, 170, 78);
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 32vw;
+  height: 20vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#initForm h1{
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+#initForm h2{
+  font-size: 20px;
+}
+
+#input{
+  height: 15px;
+  width: 60px;
+}
+
+#initForm .cInH2{
+  display:flex;
+  align-items: baseline;
+}
+
+#start{
+  background-color: white;
+  border-radius: 8px;
+  height: 55px;
+  width: 100px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}

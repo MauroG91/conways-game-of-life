@@ -5,6 +5,8 @@
   <title>Game of Life</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/form-style.css">
+  <link rel="stylesheet" href="css/restore-style.css">
   <script type="text/javascript" src="js/storage.js"></script>
   <script type="text/javascript" src="js/game-of-life.js"></script>
   <script type="text/javascript" src="js/cell.js"></script>
@@ -14,17 +16,19 @@
 </head>
 <body>
   <div class="game" id="game">
+    <form id= "restoreSession">
+      <h1>Do you wanna restore to the last session?</h1>
+      <button id="accept" type="button" name="button"> Yes </button>
+      <button id="cancel" type="button" name="button"> No </button>
+    </form>
+
     <form id="initForm" class="initForm" action="index.html" method="post">
-      <br>
-      <h1>Jhon Conways Game of Life</h1>
-      <br>
-      <br>
-      <span id="container">
-        <h2> Select the size you want:</h2>
+      <h1> Jhon Conways Game of Life </h1>
+      <div class="cInH2">
+        <h2> Select the size you want: </h2>
         <input id="input" type="number" name="" value="" maxlength="2" min="0" max="30">
-      </span>
-      <button id="start" class="btnForm" type="button" name="button">Start</button>
-      <button id="lastSession" class="btnForm" type="button" name="button">Last Session</button>
+      </div>
+      <button id="start" type="button" name="button">Start</button>
     </form>
 
     <ul class="board">

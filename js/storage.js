@@ -1,6 +1,7 @@
 var Storage = {
   setStorage: null,
   getStorage:null,
+  clearStorage: null,
   setStorage : function() {
     var board = document.getElementsByClassName('game')[0].innerHTML;
     localStorage.setItem('board', board);
@@ -12,5 +13,9 @@ var Storage = {
     Board.columns = Board.rows
     Game.load();
     Game.start();
+  },
+  clearStorage: function() {
+    localStorage.clear('board');
+    localStorage.clear('size');
   }
 }

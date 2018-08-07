@@ -1,0 +1,23 @@
+#restoreSession{
+  background-color: rgb(232, 170, 78);
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 32vw;
+  height: 20vh;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#restoreSession h1{
+  font-size: 36px;
+  text-decoration: underline;
+  align-self: center;
+}
+
+#restoreSession button{
+  font-size: 15px;
+  border-radius: 8px;
+  background-color: white;
+  height: 80px;
+  width:110px;
+}
