@@ -23,7 +23,7 @@ var visibleItemsBoard = function() {
 }
 
 var inputCheck = function() {
-  if(document.getElementById('input').value === '') {
+  if(document.getElementById('input').value === '' || document.getElementById('input').value == 0) {
     document.getElementById('start').disabled = true;
   } else {
     if(document.getElementById('input').value <= 30) {
